@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Society Member Registration</title>
+  <style>
+    /* CSS for the registration form */
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f1f1f1;
+      border-radius: 5px;
+    }
+    
+    .container h2 {
+      text-align: center;
+    }
+    
+    .container input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    
+    .container input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .container input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Member Registration</h2>
+    <form id="registrationForm" action="#" method="post">
+      <label for="houseNumber">House Number</label>
+      <input type="text" id="houseNumber" name="houseNumber" placeholder="Enter House Number" required>
+      
+      <label for="memberName">Member Name</label>
+      <input type="text" id="memberName" name="memberName" placeholder="Enter Member Name" required>
+      
+      <label for="mobileNumber">Mobile Number</label>
+      <input type="text" id="mobileNumber" name="mobileNumber" placeholder="Enter Mobile Number" required>
+      
+      <input type="submit" value="Register">
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Get form values
+      var houseNumber = document.getElementById("houseNumber").value;
+      var memberName = document.getElementById("memberName").value;
+      var mobileNumber = document.getElementById("mobileNumber").value;
+
+      // Perform necessary operations with the data
+      console.log("House Number: " + houseNumber);
+      console.log("Member Name: " + memberName);
+      console.log("Mobile Number: " + mobileNumber);
+
+      // Add your own logic to store the data or perform any other actions
+      // For example, you can send the data to a server using AJAX or store it in local storage
+
+      // Clear the form fields after submission
+      document.getElementById("houseNumber").value = "";
+      document.getElementById("memberName").value = "";
+      document.getElementById("mobileNumber").value = "";
+    });
+  </script>
+</body>
+</html>
